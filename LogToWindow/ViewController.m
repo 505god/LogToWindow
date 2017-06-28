@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "LogToWindow.h"
+
 @interface ViewController ()
 
 @end
@@ -17,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *str = @"test";
+    
+    CGFloat xx = 0.02;
+    
+    _TLog(@"%f",xx);
+    
+    _TLLog(@"%@",str);
+    _TLog(@"%@",str);
+    _TMLog(@"%@",str);
+    _TLMLog(@"%@",str);
 }
 
 
