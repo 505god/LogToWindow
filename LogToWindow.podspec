@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LogToWindow"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "Debug模式下宏定义log打印输出到window层"
   s.homepage     = "https://github.com/505god/LogToWindow"
 

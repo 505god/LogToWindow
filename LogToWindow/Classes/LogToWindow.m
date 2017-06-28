@@ -240,13 +240,17 @@
         [attributedString appendAttributedString:logString];
     }
     
-    self.textView.attributedText = attributedString;
+    __weak typeof(self)weakself = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        weakself.textView.attributedText = attributedString;
+        
+        // scroll to bottom
+        if(attributedString.length > 0) {
+            NSRange bottom = NSMakeRange(attributedString.length - 1, 1);
+            [weakself.textView scrollRangeToVisible:bottom];
+        }
+    });
     
-    // scroll to bottom
-    if(attributedString.length > 0) {
-        NSRange bottom = NSMakeRange(attributedString.length - 1, 1);
-        [self.textView scrollRangeToVisible:bottom];
-    }
 }
 
 #pragma mark -
