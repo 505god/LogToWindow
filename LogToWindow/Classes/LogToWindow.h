@@ -10,13 +10,13 @@
 
 #ifdef DEBUG
 //文本
-#define _TLog(format, ...)  [[LogToWindow sharedInstance] printLog:format,__VA_ARGS__];
+#define _TLog(format, ...)  [[LogToWindow sharedInstance] printLog:format,##__VA_ARGS__];
 //文本+行数
-#define _TLLog(format, ...)  [[LogToWindow sharedInstance] printWithLine:__LINE__ log:format,__VA_ARGS__];
+#define _TLLog(format, ...)  [[LogToWindow sharedInstance] printWithLine:__LINE__ log:format,##__VA_ARGS__];
 //文本+方法
-#define _TMLog(format, ...)  [[LogToWindow sharedInstance] printWithMethod:__func__ log:format,__VA_ARGS__];
+#define _TMLog(format, ...)  [[LogToWindow sharedInstance] printWithMethod:__func__ log:format,##__VA_ARGS__];
 //文本+行数+方法
-#define _TLMLog(format, ...)  [[LogToWindow sharedInstance] printWithLine:__LINE__ method:__func__ log:format,__VA_ARGS__];
+#define _TLMLog(format, ...)  [[LogToWindow sharedInstance] printWithLine:__LINE__ method:__func__ log:format,##__VA_ARGS__];
 
 #else
 

@@ -30,6 +30,9 @@
     _TLog(@"%@",str);
     _TMLog(@"%@",str);
     _TLMLog(@"%@",str);
+    
+    _TLMLog(@"dwedasd");
+    _TLMLog(str);
 }
 
 
