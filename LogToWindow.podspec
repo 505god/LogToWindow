@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LogToWindow"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "Debug模式下宏定义log打印输出到window层"
   s.homepage     = "https://github.com/505god/LogToWindow"
 
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.author             = { "qcx" => "18915410342@126.com" }
   s.platform     = :ios
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/505god/LogToWindow.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/505god/LogToWindow.git", :tag => "1.0.4" }
   s.source_files  = 'LogToWindow/Classes/*.{h,m}'
   s.requires_arc = true
 
